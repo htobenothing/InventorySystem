@@ -1,0 +1,225 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Clerk.master.cs" Inherits="LogicUniversity.Clerk" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8" />
+
+
+
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/Style.css" />
+    <%--<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>--%>
+    <link href="~/DatePicker/bootstrap-datepicker.css" rel="stylesheet" />
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <title>Logic University</title>
+    <!-- Bootstrap Core CSS -->
+    <%-- <link href="../css/bootstrap.min.css" rel="stylesheet"/>--%>
+    <!-- MetisMenu CSS -->
+    <!--<link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">-->
+    <!-- Timeline CSS -->
+    <!--<link href="../dist/css/timeline.css" rel="stylesheet">-->
+    <!-- Custom CSS -->
+    <link href="~/css/sb-admin-2.css" rel="stylesheet" />
+
+    <!-- Custom Fonts -->
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <form id="form1" runat="server" style="margin-bottom:150px">
+        <div id="wrapper" >
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="../../Logo.png" Width="230px" Height="45px" />
+                    </a>
+                </div>
+                <!-- /.navbar-header -->
+                <ul class="nav navbar-top-links navbar-right">
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <asp:Label runat="server" ID="lblUser"></asp:Label><i class="fa fa-user fa-fw"></i><i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="/LogicUniversity/View/StoreClerk/UpdateProfile.aspx"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                            </li>
+
+                            <li class="divider"></li>
+                            <li>
+                                <asp:LinkButton runat="server" ID="btnLogout" i class="fa fa-sign-out fa-fw" OnClick="btnLogout_Click"> Logout</asp:LinkButton>
+                                <%--  <a href="Login.aspx"><i class="fa fa-sign-out fa-fw"></i> Logout</a>--%>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                    <!-- /.dropdown -->
+                </ul>
+                <!-- /.navbar-top-links -->
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+
+
+
+                            <li>
+                                <a href="#"><b>Create</b><span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+
+                                        <a href="/LogicUniversity/View/StoreClerk/Create/CreatePurchaseOrder.aspx">Purchase order </a>
+                                    </li>
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/Create/CreateAdjVoucherControl.aspx">Adjustment Voucher</a>
+                                    </li>
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/Create/CreateDisbursement.aspx">Disbursement</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+
+                            <li>
+                                <a href="#"><b>Maintain</b><span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/Maintain/PurchaseOrderCancel.aspx">Purchase order Cancel</a>
+                                    </li>
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/Maintain/ReceivedOrderPage.aspx">Receive Purchase order</a>
+                                    </li>
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/Maintain/ReorderReminder.aspx">Reorder Reminder</a>
+                                    </li>
+                                    <%-- <li>
+                                    <a href="../Maintain/AuthorizeAdjVoucher.aspx">Authorized Adjustment</a>
+                                </li>--%>
+                                    <li runat="server" id="ApproveAdj">
+                                        <a href="/LogicUniversity/View/StoreClerk/Maintain/AuthorizeAdjVoucher.aspx">Authorized Adjustment</a>
+                                    </li>
+
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+
+                            <li>
+                                <a href="#"><b>View</b><span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/ViewDetail/ViewDisbursementList.aspx">View Disbursement List</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/ViewDetail/SearchAdjustmentVoucher.aspx">Adjustment Voucher</a>
+                                    </li>
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/ViewDetail/ViewDepartment.aspx">Department Information</a>
+                                    </li>
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/ViewDetail/ViewSupplier.aspx">Supplier Information</a>
+                                    </li>
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/ViewDetail/CollectionPointCheck.aspx">Collection Point Information</a>
+                                    </li>
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/ViewDetail/ViewItems.aspx">Items Information</a>
+                                    </li>
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/ViewDetail/PurchaseOrder.aspx">Purchase Order</a>
+                                    </li>
+
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+
+                            <li runat="server" id="Report">
+                                <a href="#"><b>Report</b><span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+
+                                        <a href="/LogicUniversity/View/StoreClerk/Report/AnalyReport.aspx">Analyst Report</a>
+                                    </li>
+                                    <li>
+                                        <a href="/LogicUniversity/View/StoreClerk/Report/NormalReport.aspx">Normal Report</a>
+                                    </li>
+
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+            <div id="page-wrapper" style="height:1800px">
+                <asp:ScriptManager runat="server">
+                    <Scripts>
+                        <asp:ScriptReference Path="~/js/jquery.min.js" />
+                        <asp:ScriptReference Path="~/DatePicker/bootstrap-datepicker.js" />
+                        <asp:ScriptReference Path="~/js/bootstrap.min.js" />
+                        <asp:ScriptReference Path="~/js/metisMenu.js" />
+                        <asp:ScriptReference Path="~/js/sb-admin-2.js" />
+                    </Scripts>
+                </asp:ScriptManager>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+        </div>
+       
+
+
+
+
+
+
+        <%-- <script src="/js/jquery.min.js"></script>--%>
+        <script>
+            $(document).ready(function () {
+                $(".datepicker").datepicker({ format: "dd/mm/yyyy", autoclose: true, todayBtn: 'linked' })
+            });
+        </script>
+        <%-- <script src="/DatePicker/bootstrap-datepicker.js"></script>
+         <%--<script src="/DatePicker/bootstrap-datetimepicker.js"></script>--%>
+        <!-- Bootstrap Core JavaScript -->
+        <%--    <script src="/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/js/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/sb-admin-2.js"></script>--%>
+    </form>
+</body>
+</html>

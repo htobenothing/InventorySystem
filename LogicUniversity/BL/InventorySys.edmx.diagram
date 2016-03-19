@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0e5d6654d2544b32ac5ff17615554769" Name="Diagram1">
+        <EntityTypeShape EntityType="InventorySysDBModel.Adjustment" Width="1.5" PointX="10.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.AdjustmentDetail" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.CollectionPoint" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.DelegateHistory" Width="1.5" PointX="10.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.Department" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.Disbursement" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.DisbursementDetail" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.Item" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.ItemCategory" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.ItemTransaction" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.OrderList" Width="1.5" PointX="13.5" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.OrderListDetail" Width="1.5" PointX="15.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.Requisition" Width="1.5" PointX="13.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.RequisitionItem" Width="1.5" PointX="15.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.Role" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.Staff" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.Supplier" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.SupplierInventory" Width="1.5" PointX="10.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventorySysDBModel.sysdiagram" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Adjustmen__Appro__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Adjustmen__Issue__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Adjustmen__Vouch__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Adjustmen__Item___4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Departmen__Colle__145C0A3F" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__DelegateH__Manag__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__DelegateH__Staff__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Disbursem__Dept___24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Staff__Dept_ID__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Disbursem__Disbu__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Disbursem__RepSt__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Requisiti__Disbu__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Disbursem__Item___286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Item__Category_I__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Item__FirstSuppl__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Item__SecondSupp__20C1E124" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Item__ThirdSuppl__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__ItemTrans__Item___37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__OrderList__Item___4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Requisiti__Item___59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__SupplierI__Item___3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__OrderList__Order__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__OrderList__OrdSt__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__OrderList__RecSt__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__OrderList__Suppl__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Requisiti__Appro__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Requisiti__Requi__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Requisiti__Submi__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__Staff__Role_ID__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="InventorySysDBModel.FK__SupplierI__Suppl__3B75D760" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

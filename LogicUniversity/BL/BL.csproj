@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E8436CF-6947-4606-A885-448C590F8D11}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BL</RootNamespace>
+    <AssemblyName>BL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ceTe.DynamicPDF.40">
+      <HintPath>..\..\..\..\WEB(Tony) Mar 7\WEB\ADProject_Team1\BL\bin\Debug\ceTe.DynamicPDF.40.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adjustment.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdjustmentDetail.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="CollectionPoint.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DelegateHistory.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\ApproveRequisitionController.cs" />
+    <Compile Include="Departments\CollectionController_M.cs" />
+    <Compile Include="Departments\DelegateAuthorityController.cs" />
+    <Compile Include="Departments\SendNotificationController.cs" />
+    <Compile Include="Departments\ConfirmReceivedController.cs" />
+    <Compile Include="Departments\DelegateAuthorityController_M.cs" />
+    <Compile Include="Departments\ConfirmReceivedController_M.cs" />
+    <Compile Include="Departments\ReceivedItemModel.cs" />
+    <Compile Include="Departments\RequisitionController.cs" />
+    <Compile Include="Departments\RequisitionItemController_M.cs" />
+    <Compile Include="Departments\RequisitionItemModel_M.cs" />
+    <Compile Include="Departments\RequisitionViewModel.cs" />
+    <Compile Include="Departments\StaffController.cs" />
+    <Compile Include="Departments\Model\SelectedReqModel.cs" />
+    <Compile Include="Departments\Model\SubmitItemDetailsModel.cs" />
+    <Compile Include="Departments\Test_ALbert.cs" />
+    <Compile Include="Departments\CollectionController.cs" />
+    <Compile Include="Disbursement.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DisbursementDetail.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySys.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventorySys.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySys.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InventorySys.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventorySys.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCategory.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemTransaction.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderList.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderListDetail.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DepRequisitionModel.cs" />
+    <Compile Include="Report\DepRequisitionDetailModel.cs" />
+    <Compile Include="Report\MonthLossItemModel.cs" />
+    <Compile Include="Report\MonthReqItemModel.cs" />
+    <Compile Include="Report\MonthSupplierDurationModel.cs" />
+    <Compile Include="Report\ReportController.cs" />
+    <Compile Include="Report\YearLossCostModel.cs" />
+    <Compile Include="Report\YearReportReuisitionModel.cs" />
+    <Compile Include="Report\YearSupplierDurationModel.cs" />
+    <Compile Include="Report\YearSupplierUnfufilledModel.cs" />
+    <Compile Include="Requisition.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RequisitionItem.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Store\AdjustVoucherController.cs" />
+    <Compile Include="Store\ApproveAdjVoucherController.cs" />
+    <Compile Include="Store\CreateDisbursementListController.cs" />
+    <Compile Include="Store\DepartmentStaffModel.cs" />
+    <Compile Include="Store\DepartmentController.cs" />
+    <Compile Include="Store\ClerkDisburementController_M.cs" />
+    <Compile Include="Store\ItemWithPriceModel.cs" />
+    <Compile Include="Store\ItemWithQtyModel.cs" />
+    <Compile Include="Store\OrderDetailController.cs" />
+    <Compile Include="Store\PurchaseOrderController.cs" />
+    <Compile Include="Store\PurchaseOrderController_M.cs" />
+    <Compile Include="Store\PurchaseOrderMailController.cs" />
+    <Compile Include="Store\PurchaseOrderPDFController.cs" />
+    <Compile Include="Store\ReorderController.cs" />
+    <Compile Include="Store\ReorderController_M.cs" />
+    <Compile Include="Store\CLerkRequisitionListController_M.cs" />
+    <Compile Include="Store\StaffController.cs" />
+    <Compile Include="Store\SubmitPurchaseOrderController.cs" />
+    <Compile Include="Store\SubmitPurchaseOrderController_M.cs" />
+    <Compile Include="Store\SupplierController.cs" />
+    <Compile Include="Store\SupplierInventoryController.cs" />
+    <Compile Include="Store\TableView\CancelOrderTableModel.cs" />
+    <Compile Include="Store\TableView\CpAndDeptTableModel.cs" />
+    <Compile Include="Store\TableView\OrderListTableModel.cs" />
+    <Compile Include="Store\TableView\PurchaseOrderTableModel.cs" />
+    <Compile Include="Store\TableView\ReceiveOrderTableModel.cs" />
+    <Compile Include="Store\TableView\ReorderReminderTableModel.cs" />
+    <Compile Include="Store\TableView\SupplierInventoryTableModel.cs" />
+    <Compile Include="Store\TestClass.cs" />
+    <Compile Include="Store\TimeConvertController.cs" />
+    <Compile Include="Store\ViewAdjustmentVoucherController.cs" />
+    <Compile Include="Store\ViewDisbursementController.cs" />
+    <Compile Include="Store\ViewDpAndCpController.cs" />
+    <Compile Include="Store\ViewItemController.cs" />
+    <Compile Include="Store\ViewSupplierController.cs" />
+    <Compile Include="Supplier.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierInventory.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>InventorySys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserController.cs" />
+    <Compile Include="Utilities\DeptLevelReqController.cs" />
+    <Compile Include="Utilities\DeptLevelReqController_M.cs" />
+    <Compile Include="Utilities\DisbDetailItemAndDeptNameModel_M.cs" />
+    <Compile Include="Utilities\DisbursementDetailItemModel_M.cs" />
+    <Compile Include="Utilities\DisbursmentItemModel_M.cs" />
+    <Compile Include="Utilities\DisItemTotalQtyModel_M.cs" />
+    <Compile Include="Utilities\ItemInfobyReqiIdModel.cs" />
+    <Compile Include="Utilities\ItemInfobyReqiIdModel_M.cs" />
+    <Compile Include="Utilities\ItemWithQtyModel_M.cs" />
+    <Compile Include="Utilities\OrderDetailController_M.cs" />
+    <Compile Include="Utilities\ReceivedItemModel_M.cs" />
+    <Compile Include="Utilities\requisitionClass.cs" />
+    <Compile Include="Utilities\RequisitionItemDetail_M.cs" />
+    <Compile Include="Utilities\RequisitionItemList_M.cs" />
+    <Compile Include="Utilities\RequisitionViewModel_M.cs" />
+    <Compile Include="Utilities\RequisitionModel_M.cs" />
+    <Compile Include="Utilities\RetreivedItemModel.cs" />
+    <Compile Include="Utilities\RetreivedItemModel_M.cs" />
+    <Compile Include="Utilities\StaffController_M.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="InventorySys.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>InventorySys.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="InventorySys.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>InventorySys.edmx</DependentUpon>
+      <LastGenOutput>InventorySys.Context.cs</LastGenOutput>
+    </None>
+    <None Include="InventorySys.edmx.diagram">
+      <DependentUpon>InventorySys.edmx</DependentUpon>
+    </None>
+    <None Include="InventorySys.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>InventorySys.edmx</DependentUpon>
+      <LastGenOutput>InventorySys.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

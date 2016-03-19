@@ -1,0 +1,23 @@
+# Empty CSS file for your own CSS
+
+ div.ridge1 {
+    border-style: ridge;
+    border-radius: 25px;
+    border-color: green;
+    padding: 20px;
+    width: 200px;
+    height: 350px;
+}
+
+div.ridge {
+    border-style: ridge;
+    padding: 20px;
+    width: 800px;
+    height: 200px;
+}
+
+body {
+    background-image:url(../2.jpg);
+    background-repeat: repeat;
+    background-attachment:local;
+}
